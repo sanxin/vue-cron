@@ -147,7 +147,7 @@ export default {
                 let _arr = this.val.split(",");
                 this.appoint = _.cloneDeep(_arr);
             } else {
-                if (Number(this.val)) {
+                if (Number(this.val) >= 0) {
                     this.type = "4";
                     this.appoint = [this.val];
                 } else {
@@ -169,7 +169,7 @@ export default {
                 },
                 4: () => {
                     this.appoint = ["0"];
-                    this.result = this.appoint.join(",");
+                    this.result = "0";
                 }
             };
             handle[val]();

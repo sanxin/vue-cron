@@ -200,7 +200,7 @@ export default {
                 },
                 7: () => {
                     this.appoint = ["1"];
-                    this.result = this.appoint.join(",");
+                    this.result = "1";
                 }
             };
             handle[val]();

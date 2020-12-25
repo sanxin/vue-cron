@@ -75,7 +75,7 @@
                     <el-checkbox
                         v-for="i in 7"
                         :key="i"
-                        :label="i"
+                        :label="String(i)"
                         @change="changeAppointWeek"
                         >{{ i }}</el-checkbox
                     >
@@ -197,8 +197,8 @@ export default {
                     this.result = this.last + "L";
                 },
                 6: () => {
-                    this.appoint = [1];
-                    this.result = this.appoint.join(",");
+                    this.appoint = ["1"];
+                    this.result = "1";
                 }
             };
             handle[val]();
